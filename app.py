@@ -17,42 +17,75 @@ HARDCODED_SHEET_URL = "https://docs.google.com/spreadsheets/d/1WP8A4up-SjQ-xcWLx
 # CATEGORY-SPECIFIC MESSAGE TEMPLATES
 # =========================================
 MESSAGE_TEMPLATES = {
-    "Hotel": """Namaskar,
-I came across *{name}* in {city} on Google Maps.
-Many restaurants are getting extra customers by showing their menu online with a simple website + QR code on tables.
-I can create a demo website for *{name}* with a menu, photos, and WhatsApp ordering.
-Would you like to see it?
-– Vedant""",
-
-    "Lodging": """Namaskar,
-I saw *{name}* in {city} on Google Maps. 
-I help hotels and resorts get more direct bookings by creating professional websites that showcase rooms, amenities, and location clearly.
-I can build a premium digital profile for *{name}*.
+    "Hotel": f"""Namaskar,
+We came across *{{name}}* in {{city}} on Google Maps. 
+Our agency helps hotels and resorts get more direct bookings by creating professional websites that showcase rooms, amenities, and location clearly.
+We can build a premium digital profile for *{{name}}*.
 Are you interested in a quick demo?
-– Vedant""",
+– Team Choppers Web Solutions""",
 
-    "Hospital": """Namaskar,
-I came across *{name}* in {city}. 
-I specialize in creating digital profiles for clinics and hospitals so patients can easily find your services, timing, and location online.
-I can set up a professional website for *{name}*.
+    "Restaurant": f"""Namaskar,
+We came across *{{name}}* in {{city}} on Google Maps.
+We help restaurants get extra customers by showing their menu online with a simple website + QR code on tables.
+We can create a demo website for *{{name}}* with a menu, photos, and WhatsApp ordering.
+Would you like to see it?
+– Team Choppers Web Solutions""",
+
+    "Gym": f"""Namaskar,
+We saw *{{name}}* in {{city}}. 
+Most people look for gym photos and membership plans before visiting. We can create professional landing pages for *{{name}}* to convert inquiries into active members.
+Would you like to see a demo?
+– Team Choppers Web Solutions""",
+
+    "Salon": f"""Namaskar,
+We came across *{{name}}* in {{city}}. 
+We help salons grow by setting up digital service menus where customers can view your work and book appointments easily.
+We can prepare a demo for *{{name}}*.
+Can we show it to you?
+– Team Choppers Web Solutions""",
+
+    "Cafe": f"""Namaskar,
+We saw *{{name}}* in {{city}} on Google Maps. 
+We create aesthetic digital menus for cafes that make your food and beverages look great online to attract a younger crowd.
+We can create a demo for *{{name}}*.
+Interested?
+– Team Choppers Web Solutions""",
+
+    "Clinic": f"""Namaskar,
+We came across *{{name}}* in {{city}}. 
+We specialize in creating digital profiles for clinics so patients can easily find your services, timings, and location online.
+We can set up a professional website for *{{name}}*.
 Would you like to see how it looks?
-– Vedant""",
+– Team Choppers Web Solutions""",
 
-    "Shop": """Namaskar,
-I saw your shop *{name}* in {city}. 
-I help local businesses reach more customers by creating a digital product catalog and a professional website.
-I can create a demo for *{name}* to show your products online.
+    "Spa": f"""Namaskar,
+We saw *{{name}}* in {{city}}. 
+A premium spa experience starts with a premium online presence. We help spas showcase their therapies and packages through elegant websites.
+We can build a demo for *{{name}}*.
 Would you like to see it?
-– Vedant""",
+– Team Choppers Web Solutions""",
 
-    "Default": """Namaskar,
-I came across *{name}* in {city} on Google Maps.
-I help local businesses grow their online presence with professional websites and Google Maps optimization.
-I've prepared a demo for *{name}*.
+    "Bakery": f"""Namaskar,
+We came across *{{name}}* in {{city}}. 
+We help bakeries take cake orders online by creating digital product catalogs with high-quality photos and WhatsApp integration.
+We can create a demo for *{{name}}*.
 Would you like to see it?
-– Vedant"""
+– Team Choppers Web Solutions""",
+
+    "Shop": f"""Namaskar,
+We saw your shop *{{name}}* in {{city}}. 
+Our agency helps local businesses reach more customers by creating digital product catalogs and professional websites.
+We can create a demo for *{{name}}* to show your products online.
+Would you like to see it?
+– Team Choppers Web Solutions""",
+
+    "Default": f"""Namaskar,
+We came across *{{name}}* in {{city}} on Google Maps.
+We help local businesses grow their online presence with professional websites and Google Maps optimization.
+We've prepared a demo for *{{name}}*.
+Would you like to see it?
+– Team Choppers Web Solutions"""
 }
-
 def process_dataframe(df):
     """Processes the dataframe specifically for MM/DD/YY date formats and Lead Management"""
     df.columns = [c.strip() for c in df.columns]
